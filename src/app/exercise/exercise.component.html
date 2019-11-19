@@ -1,0 +1,18 @@
+<!-- <div *ngFor="let exercise of exercises">
+    <p>Exercise Name: {{ exercise.name }}</p>
+    <img src="{{ exercise.image }}" width="200px" height="auto" />        
+</div> -->
+<div class="container">
+    <div class="row">
+        <div *ngFor="let exercise of exercises?.results">
+            <div>
+                <div>Id: <strong>{{ exercise.id }}</strong></div>
+                <div>Name: <a routerLink="/category/{{ exercise.category }}/{{ exercise.id }}">
+                    <strong>{{ exercise.name }}</strong></a></div>
+                <div>{{ exercise.description }}</div>
+            </div>
+            <hr/>
+        </div>
+    </div>
+</div>
+

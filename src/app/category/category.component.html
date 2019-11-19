@@ -1,0 +1,15 @@
+<!-- <div *ngFor="let category of categories">
+    <img src="{{ category.image}}" width="50px" />
+    <p>{{ category.count }}</p>
+    <hr/>
+</div> -->
+<div class="container">
+    <div class="row">
+        <div *ngFor="let category of categories?.results">
+            <div class="col-sm-2">
+                <div>Id: <strong>{{ category.id }}</strong></div>
+                <div>Name: <a routerLink="/category/{{ category.id }}"><strong>{{ category.name }}</strong></a></div>
+            </div>
+        </div>
+    </div>
+</div>
